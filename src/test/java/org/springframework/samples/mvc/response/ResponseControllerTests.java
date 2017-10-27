@@ -36,7 +36,7 @@ public class ResponseControllerTests {
 					.accept(new MediaType("text", "plain", Charset.forName("UTF-8"))))
 				.andExpect(status().isOk())
 				.andExpect(content().string(
-						"\u3053\u3093\u306b\u3061\u306f\u4e16\u754c\uff01 (\"Hello world!\" in Japanese)"));
+						"\u3053\u3093\u306b\u3061\u306f\u4e16\u754c\uff01 (\"Hello My world!\" in Japanese)"));
 	}
 
 	@Test
@@ -44,7 +44,7 @@ public class ResponseControllerTests {
 		this.mockMvc.perform(get("/response/charset/produce"))
 				.andExpect(status().isOk())
 				.andExpect(content().string(
-						"\u3053\u3093\u306b\u3061\u306f\u4e16\u754c\uff01 (\"Hello world!\" in Japanese)"));
+						"\u3053\u3093\u306b\u3061\u306f\u4e16\u754c\uff01 (\"Hello My world!\" in Japanese)"));
 	}
 
 	@Test
